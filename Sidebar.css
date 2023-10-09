@@ -1,0 +1,24 @@
+
+
+.sidebar {
+    width: 250px;
+    /* background-color: #f0f0f0; */
+    padding: 10px;
+    background-color: #454545;
+    border-radius: 4px;
+    color: #ccc;
+}
+
+.sidebar ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.sidebar li {
+    padding: 8px 0;
+    cursor: pointer;
+}
+
+.sidebar li:hover {
+    background-color: #ccc;
+}

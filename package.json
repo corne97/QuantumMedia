@@ -1,0 +1,24 @@
+{
+	"name": "quantum-media",
+	"version": "0.0.1",
+	"main": "dist/main/index.js",
+	"scripts": {
+		"start": "concurrently npm:watch-*",
+		"watch-ts": "tsc --watch",
+		"start-electron": "electron .",
+		"watch-electron": "nodemon --watch dist --watch index.html --exec \"npm run start-electron\""
+	},
+	"license": "MIT",
+	"devDependencies": {
+		"@types/react": "^18.2.22",
+		"@types/react-dom": "^18.2.7",
+		"concurrently": "^8.2.1",
+		"electron": "^26.2.1",
+		"nodemon": "^3.0.1",
+		"typescript": "^5.2.2"
+	},
+	"dependencies": {
+		"react": "^18.2.0",
+		"react-dom": "^18.2.0"
+	}
+}
