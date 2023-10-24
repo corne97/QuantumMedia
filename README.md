@@ -6,6 +6,11 @@ to install the dependencies use
 <br>
 to start the electron app use `npm start`
 
+### Current features:
+- show folder structure
+- Navigate through folders and subfolders and display dedicated files
+- Open file with default OS program
+
 ### Feautures coming soon:
 - Option to create a folder
 - Option to create a file
