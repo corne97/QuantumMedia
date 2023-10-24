@@ -17,31 +17,23 @@ const readdir = (path) =>
 }
 
 
-// export const openFile = ([path]) => {
 
-// 	const exec = require('child_process').exec;
-// 	exec(openFile() + '' + path);
-	
-// 	// determine which platform is being used 
-// 	switch(process.platform)
-// 	{
-// 		case 'darwin' : return 'open';
-// 		case 'win32' : return 'start';
-// 		default : return 'xdg-open';
-			
-// 	}
 
-// }
 
 
 export const Folder = ({ name, path }) =>
 {
-  const [isOpen, setIsOpen] = useState(false);
-  const toggleSubfolders = () =>
-  {
-    setIsOpen(!isOpen);
-  };
+	const [isOpen, setIsOpen] = useState(false);
+	const toggleSubfolders = () =>
+	{
+		setIsOpen(!isOpen);
+	};
+	
+	const openFile = (p) => {
+		shell.openPath(p);
+	};
 
+	
   const subfolders = readdir(path);
 
   return (
@@ -57,7 +49,7 @@ export const Folder = ({ name, path }) =>
           {subfolders.map(subfolder =>
           {
            try{
-            const p = Path.join(path,subfolder) 
+            let p = Path.join(path,subfolder) 
             const pathresult = fs.statSync(p);
             if(pathresult.isDirectory())
             {
@@ -66,7 +58,7 @@ export const Folder = ({ name, path }) =>
             }
             return (
               // return file name in folder
-              <div>{subfolder}</div>
+			  <div onClick={() => openFile(p)}>{subfolder}</div>
             )
            } catch(e){
               // console.error(e)
