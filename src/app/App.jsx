@@ -15,6 +15,7 @@ export const App = () =>
 	return (
 		
 		<div className="app">
+			{/* <urlBar /> */}
 			<Sidebar>
 				
 						<Folder name={"c:/"} path={"c:/"} />
