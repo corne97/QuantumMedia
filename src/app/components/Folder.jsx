@@ -2,6 +2,7 @@ import React, { useState } from "react";
 import fs from 'fs';
 import Path from 'path';
 
+const { shell } = window.require('electron');
 
 const readdir = (path) =>
 {
@@ -14,6 +15,24 @@ const readdir = (path) =>
     return [];
   }
 }
+
+
+// export const openFile = ([path]) => {
+
+// 	const exec = require('child_process').exec;
+// 	exec(openFile() + '' + path);
+	
+// 	// determine which platform is being used 
+// 	switch(process.platform)
+// 	{
+// 		case 'darwin' : return 'open';
+// 		case 'win32' : return 'start';
+// 		default : return 'xdg-open';
+			
+// 	}
+
+// }
+
 
 export const Folder = ({ name, path }) =>
 {
@@ -32,6 +51,7 @@ export const Folder = ({ name, path }) =>
       {name}
 
       </div>
+      {/*  check if folder is opened */}
       {isOpen && (
         <div className="subfolders">
           {subfolders.map(subfolder =>
