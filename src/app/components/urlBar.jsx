@@ -1,6 +1,7 @@
 import React from 'react';
 
-const UrlBar = ({ currentPath }) => {
+export const UrlBar = ({currentPath}) => {
+
   return (
     <div className="url-bar">
       Current Path: {currentPath}
@@ -8,4 +9,3 @@ const UrlBar = ({ currentPath }) => {
   );
 }
 
-export default UrlBar;
