@@ -1,20 +1,21 @@
 
 import { Sidebar } from "./components/Sidebar";
-import { Folder } from "./components/Folder";
-import {UrlBar} from "./components/UrlBar";
+import { Folder } from "./components/Folder"
 import fs from 'fs';
+
+
+
 
 
 
 export const App = () =>
 {
 
+
 	return (
 		
 		<div className="app">
-			<UrlBar currentPath={""} />
-
-
+			{/* <urlBar /> */}
 			<Sidebar>
 				
 						<Folder name={"c:/"} path={"c:/"} />
